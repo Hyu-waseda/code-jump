@@ -51,7 +51,7 @@ const Home = () => {
       <section className={styles.about}>
         <h2 id="about">About</h2>
         <figure className={styles.profile}>
-          <img src="/img/about.jpg" alt="kakeru miyauchi's photo" />
+          <img src="/img/about.jpg" alt="kakeru miyauchi" />
           <figcaption className={styles.profile_caption}>
             <p className={styles.profile_caption_title}>KAKERU MIYAUCHI</p>
             <p className={styles.profile_caption_description}>
@@ -72,7 +72,7 @@ const Home = () => {
                 className={styles.bicycle_list_item}
                 key={`${bicycle.title}-${index}`}
               >
-                <img src={bicycle.img_path} alt={`photo of ${bicycle.title}`} />
+                <img src={bicycle.img_path} alt={`${bicycle.title}`} />
                 <figcaption>
                   <p className={styles.bicycle_list_item_title}>
                     {bicycle.title}
