@@ -1,0 +1,124 @@
+.container {
+  margin: 8px auto;
+  padding: 0 4%;
+  max-width: 960px;
+  color: #383e45;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+
+    .header_logo {
+      width: 120px;
+      height: 40px;
+    }
+
+    .header_nav a {
+      margin-left: 30px;
+      color: #24292e;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  .mainvisual {
+    width: 100vw; /* ビューポートの幅いっぱいに広げる */
+    height: 600px; /* 高さを600pxに固定 */
+    object-fit: cover; /* アスペクト比を維持しつつ、画像が全体に表示されるように調整 */
+    margin-left: calc(50% - 50vw); /* 横方向に親要素の制約を無視 */
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin: 80px 0;
+      font-size: 2rem;
+      text-decoration: underline 1px solid;
+      text-underline-offset: 12px;
+    }
+
+    .profile {
+      display: flex;
+
+      img {
+        margin-right: 30px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+      }
+
+      .profile_caption {
+        width: 400px;
+
+        .profile_caption_title {
+          font-size: 1rem;
+          margin: 4px 0;
+          font-weight: 600;
+        }
+
+        .profile_caption_description {
+          font-size: 0.9rem;
+          line-height: normal;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .bicycle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin: 80px 0;
+      font-size: 2rem;
+      text-decoration: underline 1px solid;
+      text-underline-offset: 12px;
+    }
+
+    .bicycle_list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+
+      .bicycle_list_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(33.3% - 20px);
+        margin: 0 10px;
+
+        img {
+          width: 100%;
+        }
+
+        .bicycle_list_item_title {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .bicycle_list_item_description {
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 80px;
+    text-align: center;
+  }
+}
