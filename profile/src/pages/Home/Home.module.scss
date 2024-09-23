@@ -1,8 +1,14 @@
+@use "../../styles/variables.scss" as v;
+
 .container {
   margin: 8px auto;
   padding: 0 4%;
   max-width: 960px;
-  color: #383e45;
+  color: v.$color-grey-primary;
+
+  @media (max-width: v.$break-point) {
+    padding: 0 2%;
+  }
 
   .header {
     width: 100%;
@@ -18,11 +24,11 @@
 
     .header_nav a {
       margin-left: 30px;
-      color: #24292e;
+      color: v.$color-grey-secondary;
       text-decoration: none;
 
       &:hover {
-        color: black;
+        color: v.$color-brack;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
     }
@@ -50,15 +56,30 @@
     .profile {
       display: flex;
 
+      @media (max-width: v.$break-point) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+      }
+
       img {
         margin-right: 30px;
         width: 100px;
         height: 100px;
         border-radius: 100%;
+
+        @media (max-width: v.$break-point) {
+          margin: 0 0 32px 0;
+        }
       }
 
       .profile_caption {
-        width: 400px;
+        max-width: 400px;
+
+        @media (max-width: v.$break-point) {
+          max-width: 440px;
+        }
 
         .profile_caption_title {
           font-size: 1rem;
@@ -92,12 +113,21 @@
       flex-wrap: wrap;
       padding: 0;
 
+      @media (max-width: v.$break-point) {
+        flex-direction: column;
+      }
+
       .bicycle_list_item {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: calc(33.3% - 20px);
         margin: 0 10px;
+
+        @media (max-width: v.$break-point) {
+          width: 100%;
+          margin: 0 0 12px 0;
+        }
 
         img {
           width: 100%;
