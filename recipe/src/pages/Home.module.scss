@@ -1,6 +1,8 @@
+@use "../styles/variables" as v;
+
 .container {
   font-size: 16px;
-  color: #2b2a27;
+  color: v.$black-primary;
 
   .mainvisual {
     width: 100%;
@@ -19,7 +21,7 @@
 
   .description {
     text-align: center;
-    margin-bottom: 80px;
+    margin: 0 20px 80px;
     line-height: 24px;
   }
 
@@ -27,10 +29,19 @@
     display: flex;
     margin-bottom: 60px;
 
+		@media (max-width: v.$break-point) {
+			flex-direction: column;
+		}
+
     img {
       width: calc(100% / 3);
       height: 500px;
       object-fit: cover;
+
+			@media (max-width: v.$break-point) {
+				width: 100%;
+				
+			}
     }
   }
 
@@ -41,9 +52,9 @@
     margin: 0 auto 93px;
     width: 232px;
     height: 64px;
-    border: solid 1px #2b2a27;
+    border: solid 1px v.$black-primary;
     text-decoration: none;
-    color: #2b2a27;
+    color: v.$black-primary;
     font-size: 14px;
   }
 
@@ -56,7 +67,7 @@
 
     .footer_link {
       margin: 0 10px 20px 0;
-      color: #2b2a27;
+      color: v.$black-primary;
       font-size: 12px;
     }
 
